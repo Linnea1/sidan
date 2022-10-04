@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "BigelowRules";
+    src: url(fonts/BigelowRules-Regular.ttf);
+}
+body{
+    background-image:url(images/pan.jpg);
+    background-position:center;
+    background-attachment: fixed;
+    border-radius: 30px;
+    color:rgb(253, 248, 241);
+    margin: 100px;
+
+}
+h1{
+    font-family: BigelowRules;
+}
+header{
+    
+    font-size: 65px;
+    text-align: center;
+    margin: -30px;
+}
+.box{
+    background-color: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 30px;
+}
+nav{
+    display: flex;
+}
+nav div{
+
+    background-color: rgb(2, 110, 131);
+    width: 200px;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    flex-grow: 1;
+    margin: 10px 10px 60px 10px;
+    cursor: pointer;
+}
+.best{
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid rgba(250,250,250,0.6);
+    border-radius: 20px;
+    padding: 10px;
+}
+#pans_labyrinth{
+   display: grid;
+   grid-template-columns: 3fr 1fr 1fr;
+   grid-template-rows: 250px 250px auto;
+   gap: 20px;
+   
+}
+.cover{
+    grid-column: 2/span 2;
+    grid-row: 1/span 2;
+    background-color: rgb(26, 26, 93);
+    border-radius: 20px;
+    justify-content: center;
+  
+}
+.album_data{
+    padding: 20px;
+    grid-column: 1/1;
+    grid-row: 1/span 2;
+}
+.side_one{
+   
+    background-color: rgb(38, 95, 95);
+    grid-column: 3/3;
+    grid-row: 3/span 2;
+    
+}
+#shape_of_water{
+    display: grid;
+}
