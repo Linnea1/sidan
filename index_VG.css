@@ -3,40 +3,42 @@
     src: url(fonts/BigelowRules-Regular.ttf);
 }
 body{
-    background-image:url(images/pan.jpg);
-    background-position:bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-attachment: fixed;
-    border-radius: 30px;
     color:rgb(253, 248, 241);
-    
     background-color: black;
-    
-
+    margin: 0;
+    height: 100vh;
+}
+body>div{
+    width: 80vw;
+    height: 100vh;
+    margin:5vh 10vw;
+    background-image:url(images/pan.jpg);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
+}
+body>div>div{
+    margin: 4vw;
 }
 h1{
     font-family: BigelowRules;
 }
 header{
-    
     font-size: 4vw;
     text-align: center;
     margin: -30px;
 }
-body>div{
-    background-color: rgba(0,0,0,0.7);
-    padding: 30px;
-    border-radius: 30px;
-    margin: 10vw;
+.marked{
+    border: 2px  white;
+    box-shadow: 0 0 15px white;
+    box-sizing: border-box;
 }
 nav{
     display: flex;
 }
 nav div{
-    background-color: rgb(2, 110, 131);
-    width: 200px;
+    background-color: rgba(2, 110, 131, 0.6);
     padding: 20px 0;
     text-align: center;
     border-radius: 10px;
@@ -44,17 +46,27 @@ nav div{
     margin: 10px 10px 60px 10px;
     cursor: pointer;
 }
+nav div:hover{
+    background-color:  rgba(0, 68, 81, 0.7);
+}
+.marked:hover{
+    background-color: rgba(2, 110, 131, 0.6);
+}
 .best{
     background-color: rgba(0,0,0,0.6);
-    border: 2px solid rgba(2, 110, 131, 0.538);
+    border: 2px solid rgba(2, 110, 131, 0.6);
     border-radius: 20px;
     padding: 10px;
+    box-sizing: border-box;
 }
 #pans_labyrinth{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: auto auto 30vh;
-   
+   grid-template-rows: auto auto auto;
+}
+#pans_labyrinth p{
+    font-size: 19px;
+    padding-top: 5%;
 }
 .cover{
     grid-column: 5/span 2;
@@ -64,13 +76,12 @@ nav div{
     justify-self: center; 
     overflow:hidden;
     border: 5px solid rgb(26, 63, 63);
+    box-sizing: border-box;
 }
-
 .show_hover{
     width: 100%;
 }
 .album_data{
-    
     grid-column: 1/span 3;
     grid-row: 1/span 2;
 }
@@ -87,6 +98,7 @@ nav div{
     position: relative;
     right: 4.5%;
     gap: 5%;
+    min-height: 120px;
 }
 li{
     list-style: none;
@@ -97,8 +109,9 @@ li{
 .top_right_90{
     grid-column: 1;
     grid-row: 1;
-    background-color: rgb(26, 63, 63);
+    background-color: #91743a;
     border-radius: 20px 0px 20px 20px;
+    color: rgb(26, 63, 63);
 }
 .empty{
     grid-column: 2;
@@ -107,12 +120,23 @@ li{
 .bottom_left_90{
     grid-column: 3/span 2;
     grid-row: 1;
-    background-color: rgb(26, 63, 63);
+    background-color: #91743a;
     border-radius: 20px 20px 20px 0px;
+    color: rgb(26, 63, 63);
+}
+.bottom_right_90{
+    background-color: #91743a;
+    border-radius: 20px 20px 0 20px;
+    color: rgb(26, 63, 63);
 }
 .image_1{
     background-image: url(images/guillermo_del_toro.jpg);
     background-size: cover;
+    background-position: center;
+    background-color: #91743a;
+}
+li.top_left_90{
+    color: white;
 }
 .song_list{
     grid-column: 5 / span 2;
@@ -120,11 +144,13 @@ li{
     display: flex;
     gap: 5%;
     margin-top: 5%;
+    color: #91743a;
 }
 .side_one{
     background-color: rgb(26, 63, 63);
     width: 50%;
     border-radius: 0 0 0 20px;
+    padding: 7px;
 }
 .side_two{
     background-color: rgb(26, 63, 63);
@@ -133,4 +159,6 @@ li{
 }
 #shape_of_water{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: auto auto auto;
 }
