@@ -82,21 +82,30 @@ nav div:hover{
     background-color: rgb(26, 63, 63);
     border-radius: 20px 20px 0 0;
     justify-self: center; 
-    overflow:hidden;
     border: 5px solid rgb(26, 63, 63);
     box-sizing: border-box;
+    object-fit: contain;
+    position: relative;
+    overflow: hidden;
 }
 .show_hover{
     width: 100%;
+    z-index: 2;
+    object-fit: fill;
+ 
 }
-.show_hover:hover{
-    display: none;
-}
+
 .show_not_hover:hover{
-   display: block;
+    opacity: 0;
 }
 .show_not_hover{
-   display: none;
+ position:absolute;
+ left: 0;
+ object-fit: fill;
+ z-index: 1;
+ width: 100%;
+ transition-property:opacity;
+ transition-duration: 1s;
 }
 .album_data{
     grid-column: 1/span 4;
@@ -197,6 +206,7 @@ padding-top: 5%;
     overflow:hidden;
     border: 5px solid #020D23;
     box-sizing: border-box;
+    position: relative;
 }
 #shape_of_water>.song_list{
     grid-column: 5 / span 2;
@@ -246,7 +256,6 @@ padding-top: 5%;
     grid-column: 6/7;
     grid-row: 1;
     border-radius: 20px 20px 0 20px;
-    
 }
 
 
