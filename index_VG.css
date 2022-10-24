@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "BigelowRules";
-    src: url(fonts/BigelowRules-Regular.ttf);
-}
+
 body{
     color:rgb(253, 248, 241);
     background-color: black;
@@ -11,20 +8,21 @@ body{
     background-position:center;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Barlow Condensed', serif;
 }
 body>div>div{
     justify-content: center;
     margin: 7vw;
     padding: 2vw;
+    border-radius: 20px;
     background-color: rgba(0, 00, 0, 0.5);
 }
 h1{
-    font-family: BigelowRules;
+    font-family: 'Bigelow Rules', serif;
 }
 header{
-    font-size: 4vw;
-    text-align: center;
-    margin: -30px;
+    font-size: 60px;
+    margin: -30px -30px -30px 0;
 }
 
 /* ------------------------------NAVIGATION----------------------------------- */
@@ -36,6 +34,7 @@ header{
 }
 nav{
     display: flex;
+    font-size: 20px;
 }
 nav div{
     background-color: rgba(2, 110, 131, 0.6);
@@ -62,18 +61,16 @@ nav div:hover{
     padding: 10px;
     box-sizing: border-box;
 }
+p{
+    font-size: 20px;
+}
 #pans_labyrinth{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
    grid-template-rows: auto auto auto;
 }
-#pans_labyrinth p{
-    font-size: 1.4vw;
-    padding-top: 5%;
-    color: rgba(255, 255, 255, 0.7);
-}
 .album_data>div+div{
-    font-size: 1.4vw;
+    font-size: 20px;
     color: rgba(255, 255, 255, 0.7);
 }
 #pans_labyrinth>.cover{
@@ -82,19 +79,16 @@ nav div:hover{
     background-color: rgb(26, 63, 63);
     border-radius: 20px 20px 0 0;
     justify-self: center; 
+    overflow:hidden;
     border: 5px solid rgb(26, 63, 63);
     box-sizing: border-box;
-    object-fit: contain;
     position: relative;
-    overflow: hidden;
 }
 .show_hover{
     width: 100%;
     z-index: 2;
     object-fit: fill;
- 
 }
-
 .show_not_hover:hover{
     opacity: 0;
 }
@@ -113,7 +107,11 @@ nav div:hover{
     margin: 4%;
 }
 .album_data>div>h1{
-    font-size: 5vw;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.album_data>div>h2{
+    font-size: 27px;
 }
 .anecdotes{
     width: 1fr;
@@ -124,12 +122,15 @@ nav div:hover{
     grid-template-rows: auto;
     gap: 5%;
     min-height: 120px;
+    position: relative;
 }
-li{
+
+.album_data>div>ul{
     list-style: none;
 }
 .anecdotes>li{
     padding: 5%;
+    list-style-type: none;
 }
 #pans_labyrinth>.anecdotes>.top_right_90{
     grid-column: 1;
@@ -160,29 +161,46 @@ li{
     background-position: center;
     background-color: #91743a;
 }
-li.top_left_90{
-    color: white;
+#pans_labyrinth>.anecdotes>.image_1{
+    color: rgba(255, 255, 255, 0.688);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
 }
+
 #pans_labyrinth>.song_list{
     grid-column: 5 / span 2;
     grid-row: 2/3;
     display: flex;
     gap: 5%;
     margin-top: 5%;
-   
 }
 #pans_labyrinth>.song_list>div{
     background-color: rgb(26, 63, 63);
-    width: 50%;
     border-radius: 0 0 0 20px;
-    padding: 7px;
     color: #91743a;
+    width: 100%;
+    padding: 5px;
 }
 #pans_labyrinth>.song_list>div+div{
     background-color: rgb(26, 63, 63);
-    width: 50%;
     border-radius:0 0 20px 0;
     color: #91743a;
+    width: 100%;
+    padding: 5px;
+}
+#pans_labyrinth>.song_list>div>h2{
+    margin-bottom: 0;
+}
+#pans_labyrinth>.song_list>div>ul{
+    padding: 8%;
+    list-style-type: circle;
+    margin-top: 0;
 }
 
 /* ------------------------------Shape of Water----------------------------------- */
@@ -192,10 +210,10 @@ li.top_left_90{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
    grid-template-rows: auto auto auto;
    margin-top: 3%;
+   margin-bottom: 5vw;
 }
 #shape_of_water>div>p{
-font-size: 19px;
-padding-top: 5%;
+    padding-top: 5%;
 }
 #shape_of_water>.cover{
     grid-column: 5/span 2;
@@ -217,23 +235,29 @@ padding-top: 5%;
 }
 #shape_of_water>.song_list>div{
     background-color: #020D23;
-    width: 50%;
+    width: 100%;
     border-radius: 0 0 0 20px;
-    padding: 7px;
+    padding: 5px;
     color: #91743a;
 }
+
 #shape_of_water>.song_list>div+div{
     background-color: #020D23;
-    width: 50%;
+    width: 100%;
     border-radius:0 0 20px 0;
+    padding: 5px;
     color: #91743a;
+}
+#shape_of_water>.song_list>div>ul{
+    padding: 0;
+    list-style-type: none;
 }
 #shape_of_water>.anecdotes{
     color: #020D23;
 }
 #shape_of_water>.anecdotes>.bottom_left_90{
     background-color: #91743a;
-   grid-column: 1/span 2;
+    grid-column: 1/span 2;
     grid-row: 1;
     border-radius: 20px 20px 20px 0;
 }
@@ -244,12 +268,16 @@ padding-top: 5%;
     border-radius: 0 20px 20px 20px;
 }
 #shape_of_water>.anecdotes>.image_1{
-    background-color: #91743a;
+    color: rgba(255, 255, 255, 0.688);
     grid-column: 4/span 2;
     grid-row: 1;
     background-image: url(images/shape_of_water_makeup.jpg);
     background-size: cover;
     border-radius: 0 20px 20px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
 }
 #shape_of_water>.anecdotes>li+li+li{
     background-color: #91743a;
@@ -257,7 +285,334 @@ padding-top: 5%;
     grid-row: 1;
     border-radius: 20px 20px 0 20px;
 }
+#shape_of_water>.song_list>div>ul{
+    padding: 8%;
+    list-style-type: circle;
+    margin-top: 0;
+}
+/* ------------------------------Font size at 1111----------------------------------- */
+@media(max-width:1111px){
+    header{
+        font-size: 5.4vw;
+    }
+    nav{
+        font-size: 2vw;
+    }
+    p{
+        font-size: 1.9vw;
+    }
+    .album_data>div+div{
+        font-size: 1.9vw;
+    }
+    .album_data>div>h1{
+        font-size: 4.4vw;
+    }
+    .album_data>div>h2{
+        font-size: 2.5vw;
+    }
+    .song_list{
+        font-size: 1.5vw;
+    }
+    .anecdotes{
+        font-size: 1.5vw;
+    }
+}
+/* ------------------------------Font size at 900----------------------------------- */
+@media(max-width:900px){
+    header{
+        font-size: 47.7px;
+    }
+    nav{
+        font-size: 17.5px;
+    }
+    p{
+        font-size: 17px;
+    }
+    .album_data>div+div{
+        font-size: 17px;
+    }
+    .album_data>div>h1{
+        font-size: 39.3px;
+    }
+    .album_data>div>h2{
+        font-size: 22.3px;
+    }
+    .song_list{
+        font-size: 12.9px;
+    }
+    .anecdotes{
+        font-size: 13.4px;
+    }
+}
+/* ------------------------------ Tablet ----------------------------------- */
+@media(max-width:800px){
+    header{
+        text-align: center;
+        font-size: 7vw;
+    }
+    nav{
+        font-size: 3vw;
+    }
+    p{
+        font-size: 2.5vw;
+    }
+    .album_data>div+div{
+        font-size: 2.5vw;
+    }
+    .album_data>div>h1{
+        font-size: 6vw;
+    }
+    .album_data>div>h2{
+        font-size: 3vw;
+    }
+    .song_list{
+        font-size: 2vw;
+    }
+    .anecdotes{
+        font-size: 2.5vw;
+    }
+    .show_not_hover:hover{
+        opacity: 1;
+    }
+    #pans_labyrinth{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    #pans_labyrinth>.cover{
+        grid-column: 1/span 3;
+        grid-row: 1/span 2;
+        border-radius: 20px 0 0 20px;
+    }
+    #pans_labyrinth>.song_list{
+        grid-column: 4 / span 3;
+        grid-row: 1/span 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #pans_labyrinth>.song_list>div{
+        grid-column: 1;
+        grid-row: 1;
+        border-radius: 0 20px 0 0;
+    }
+    #pans_labyrinth>.song_list>div+div{
+        grid-column: 1;
+        grid-row: 2;
+        border-radius: 0 0 20px 0;
+    }
+    .album_data{
+        grid-column: 1/span 6;
+        grid-row: 3;
+        margin: 4%;
+    }
+    .anecdotes{
+        width: 1fr;
+        grid-column: 1 / span 6;
+        grid-row: 4/span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5%;
+        min-height: 120px;
+        margin-left: -5%;
+    }
+    #pans_labyrinth>.anecdotes>.top_right_90{
+        grid-column: 1/span 2;
+        grid-row: 1;
+    }
+    empty{
+        grid-column: 2/span 2;
+        grid-row: 1;
+    }
+    #pans_labyrinth>.anecdotes>.bottom_left_90{
+        grid-column: 5/span 3;
+        grid-row: 1;
+    }
+    #pans_labyrinth>.anecdotes>.bottom_right_90{
+        grid-column: 5/span 2;
+        grid-row: 2;
+    }
+    #pans_labyrinth>.anecdotes>.image_1{
+        grid-column: 3/span 2;
+        grid-row: 2;
+    }
 
+    #shape_of_water{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    #shape_of_water>.cover{
+        grid-column: 1/span 3;
+        grid-row: 1/span 2;
+        border-radius: 20px 0 0 20px;
+    }
+    #shape_of_water>.song_list{
+        grid-column: 4 / span 3;
+        grid-row: 1/span 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #shape_of_water>.song_list>div{
+        grid-column: 1;
+        grid-row: 1;
+        border-radius: 0 20px 0 0;
+    }
+    #shape_of_water>.song_list>div+div{
+        grid-column: 1;
+        grid-row: 2;
+        border-radius: 0 0 20px 0;
+    }
+    #shape_of_water>.anecdotes>.bottom_left_90{
+        grid-column: 1/span 3;
+        grid-row: 1;
+    }
+    #shape_of_water>.anecdotes>li+li{
+        grid-column: 4/5;
+        grid-row: 1;
+    }
+    #shape_of_water>.anecdotes>.image_1{
+        grid-column: 3/span 3;
+        grid-row: 2;
+    }
+    #shape_of_water>.anecdotes>li+li+li{
+        grid-column: 6/span 2;
+        grid-row: 2;
+    }
+ 
+}
+/* ------------------------------ Phone ----------------------------------- */
+@media(max-width:500px){
+    body>div>div{
+        margin:0;
+        border-radius: 0;
+    }
+    header{
+        font-size: 8vw;
+    }
+    nav{
+        font-size: 4vw;
+    }
+    p{
+        font-size: 4vw;
+    }
+    .album_data>div+div{
+        font-size: 4vw;
+    }
+    .album_data>div>h1{
+        font-size: 10vw;
+    }
+    .album_data>div>h2{
+        font-size: 5vw;
+    }
+    .song_list{
+        font-size: 3vw;
+    }
+    .anecdotes{
+        font-size: 3.5vw;
+    }
+    .album_data{
+        grid-column: 1/span 6;
+        grid-row: 4;
+        margin: 4%;
+    }
+    #pans_labyrinth>.cover{
+        grid-column: 1/span 6;
+        grid-row: 1/span 2;
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+    }
+    #pans_labyrinth>.song_list{
+        grid-column: 1/span 6;
+        grid-row: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 3% 3% 0 0;
+    }
+    #pans_labyrinth>.song_list>div{
+        grid-column: 1;
+        grid-row: 1;
+        border-radius: 0 0 0 20px;
+    }
+    #pans_labyrinth>.song_list>div+div{
+        grid-column: 2;
+        grid-row: 1;
+        border-radius: 0 0 20px 0;
+    }
+    .anecdotes{
+        width: 1fr;
+        grid-column: 1 / span 6;
+        grid-row: 5/span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5%;
+        min-height: 120px;
+        margin-left: -10%;
+    }
+    #pans_labyrinth>.anecdotes>.top_right_90{
+        grid-column: 1/span 3;
+        grid-row: 1;
+    }
+    empty{
+       display: none;
+    }
+    #pans_labyrinth>.anecdotes>.bottom_left_90{
+        grid-column: 4/span 4;
+        grid-row: 1;
+    }
+    #pans_labyrinth>.anecdotes>.bottom_right_90{
+        grid-column: 6/span 2;
+        grid-row: 2;
+    }
+    #pans_labyrinth>.anecdotes>.image_1{
+        grid-column: 4/span 2;
+        grid-row: 2;
+    }
 
-
-
+    #shape_of_water>.cover{
+        grid-column: 1/span 6;
+        grid-row: 1/span 2;
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+    }
+    #shape_of_water>.song_list{
+        grid-column: 1/span 6;
+        grid-row: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 3% 3% 0 0;
+    }
+    #shape_of_water>.song_list>div{
+        grid-column: 1;
+        grid-row: 1;
+        border-radius: 0 0 0 20px;
+    }
+    #shape_of_water>.song_list>div+div{
+        grid-column: 2;
+        grid-row: 1;
+        border-radius: 0 0 20px 0;
+    }
+    #shape_of_water>.anecdotes>.bottom_left_90{
+        grid-column: 1/span 4;
+        grid-row: 1;
+    }
+    #shape_of_water>.anecdotes>li+li{
+        grid-column: 5/span 3;
+        grid-row: 1;
+    }
+    #shape_of_water>.anecdotes>.image_1{
+        grid-column: 1/span 4;
+        grid-row: 2;
+    }
+    #shape_of_water>.anecdotes>li+li+li{
+        grid-column: 5/span 3;
+        grid-row: 2;
+    }
+}
